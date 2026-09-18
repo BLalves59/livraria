@@ -1,0 +1,18 @@
+CREATE DATABASE LivrariaDB;
+
+CREATE TABLE livros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(150) NOT NULL,
+    autor VARCHAR(100) NOT NULL,
+    categoria VARCHAR(50) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    estoque INT NOT NULL,
+    capa VARCHAR(255)
+);
+-- Inserindo alguns livros para base/testes
+INSERT INTO livros (titulo, autor, categoria, preco, estoque, capa)
+VALUES
+('Clean Code', 'Robert C. Martin', 'Programação', 89.90, 10, 'clean-code.jpg'),
+('Dom Casmurro', 'Machado de Assis', 'Romance', 39.90, 15, 'dom-casmurro.jpg'),
+('Harry Potter', 'J.K. Rowling', 'Fantasia', 49.90, 8, 'harry-potter.jpg'),
+('O Hobbit', 'J.R.R. Tolkien', 'Fantasia', 59.90, 12, 'o-hobbit.jpg');
